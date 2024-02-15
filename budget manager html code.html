@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Budget Manager</h1>
+        <div class="form">
+            <input type="text" id="expenseDescription" placeholder="Expense Description">
+            <input type="number" id="expenseAmount" placeholder="Amount">
+            <select id="expenseCategory">
+                <option value="food">Food</option>
+                <option value="transport">Transport</option>
+                <option value="utilities">Utilities</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="healthcare">Healthcare</option>
+                <option value="grocery">grocery</option>
+            </select>
+            <button onclick="showgraph()">show graph</button>
+            <button onclick="addExpense()">Add Expense</button>
+        </div>
+        <div id="expenseList">
+            
+        </div>
+        <div>
+            <h2>Total Balance: <span id="totalBalance">Rs0.00</span></h2>
+        </div>
+        <div>
+            <canvas id="expenseChart"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
